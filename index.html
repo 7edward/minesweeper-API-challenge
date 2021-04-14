@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Busca Minas</title>
+  <link href="styles.css" type="text/css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <script language="JavaScript" src="functions.js"></script>
+
+</head>
+<body>
+    <table>
+<tr>
+    <td><button id="btn_easy" onclick="javascript:drawTable(this.dataset.difficulty);" data-difficulty='1'>Easy</button></td>
+    <td><button  id="btn_medium" onclick="javascript:drawTable(this.dataset.difficulty);" data-difficulty='2'>Medium</button></td>
+    <td><button  id="btn_hard" onclick="javascript:drawTable(this.dataset.difficulty);" data-difficulty='3'>Hard</button></td>
+</tr>
+<tr>
+    <td><label id="lbl_timer">Elapsed Time: </label><span id="spanTimer"></span></td>
+   
+</tr>
+<tr>
+    <td><label id="lbl_total_mines">Total Mines: </label><span id="spanTotalMines"></span></td>
+   
+</tr>
+<tr>
+    <td><label id="lbl_total_moves">Moves Made: </label><span id="spanMoves"></span></td>
+   
+</tr>
+<tr>
+    <td><label id="lbl_status">State: </label><span id="spanState">Good</span></td>
+   
+</tr>
+
+        </table>
+    <div id="tablero">
+    </div>
+    <style>
+        :root{
+            --num-columnas: 15;
+            --num-filas: 15;
+            --size: 32px;
+        }
+    </style>
+    <script>
+        drawTable(difficulty);
+    </script>
+
+</body>
+
+</html>
