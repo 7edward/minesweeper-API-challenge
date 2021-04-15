@@ -103,7 +103,7 @@ function setDifficulty(difficulty){
     document.documentElement.style.setProperty('--num-columnas',  mines.numRows);
     document.documentElement.style.setProperty('--num-filas',  mines.numCols);
     document.getElementById('spanTotalMines').innerHTML=mines.numTotalMines;
-
+    document.getElementById("spanMoves").innerHTML = '';
 }
 
 //Method to setup the bombs based on the difficulty
